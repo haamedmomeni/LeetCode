@@ -1,0 +1,11 @@
+class Solution(object):
+    def moveZeroes(self, nums):
+        n = len(nums)
+        nonZeroCursor = 0
+        for i in range(0,n):
+            if nums[i] != 0:
+                nums[nonZeroCursor] = nums[i]
+                nonZeroIndex = nonZeroIndex + 1
+        
+        for i in range (nonZeroCursor,n):
+            nums[i] = 0
