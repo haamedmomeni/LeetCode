@@ -1,0 +1,19 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        
+        answer = []
+        n = len(nums)
+        dums = nums[:]
+        for i in range(0, n):
+            nums.append(target - nums[i])
+        
+        nums.sort()
+        for i in range(0, 2*n):
+            if nums[i] == nums[i+1]:
+                t = nums[i]
+                break
+                
+        answer.append(dums.index(t))
+        answer.append(dums.index(target-t))
+                  
+        return answer
